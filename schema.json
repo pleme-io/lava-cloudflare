@@ -1,0 +1,104 @@
+{
+  "format_version": "1.0",
+  "provider_schemas": {
+    "registry.terraform.io/cloudflare/cloudflare": {
+      "provider": { "version": 0, "attributes": {}, "block_types": {} },
+      "resource_schemas": {
+        "cloudflare_zone": {
+          "version": 1,
+          "description": "Cloudflare hosted zone.",
+          "attributes": {
+            "account_id": { "type": "string", "required": true, "description": "Account ID." },
+            "zone": { "type": "string", "required": true, "description": "Zone DNS name." },
+            "type": { "type": "string", "optional": true, "description": "full or partial." },
+            "plan": { "type": "string", "optional": true, "description": "Subscription plan." },
+            "id": { "type": "string", "computed": true, "description": "Zone ID." }
+          },
+          "block_types": {}
+        },
+        "cloudflare_dns_record": {
+          "version": 1,
+          "description": "Cloudflare DNS record.",
+          "attributes": {
+            "zone_id": { "type": "string", "required": true, "description": "Zone ID." },
+            "name": { "type": "string", "required": true, "description": "Record name." },
+            "type": { "type": "string", "required": true, "description": "Record type." },
+            "content": { "type": "string", "required": true, "description": "Record content." },
+            "ttl": { "type": "number", "optional": true, "description": "TTL." },
+            "proxied": { "type": "bool", "optional": true, "description": "Cloudflare-proxied." },
+            "comment": { "type": "string", "optional": true, "description": "Comment." },
+            "id": { "type": "string", "computed": true, "description": "Record ID." }
+          },
+          "block_types": {}
+        },
+        "cloudflare_r2_bucket": {
+          "version": 1,
+          "description": "Cloudflare R2 bucket.",
+          "attributes": {
+            "account_id": { "type": "string", "required": true, "description": "Account ID." },
+            "name": { "type": "string", "required": true, "description": "Bucket name." },
+            "location": { "type": "string", "optional": true, "description": "Location hint." },
+            "id": { "type": "string", "computed": true, "description": "Bucket ID." }
+          },
+          "block_types": {}
+        },
+        "cloudflare_r2_bucket_cors": {
+          "version": 1,
+          "description": "Cloudflare R2 bucket CORS.",
+          "attributes": {
+            "account_id": { "type": "string", "required": true, "description": "Account ID." },
+            "bucket_name": { "type": "string", "required": true, "description": "Bucket name." },
+            "id": { "type": "string", "computed": true, "description": "CORS ID." }
+          },
+          "block_types": {}
+        },
+        "cloudflare_r2_custom_domain": {
+          "version": 1,
+          "description": "Cloudflare R2 custom domain.",
+          "attributes": {
+            "account_id": { "type": "string", "required": true, "description": "Account ID." },
+            "bucket_name": { "type": "string", "required": true, "description": "Bucket name." },
+            "domain": { "type": "string", "required": true, "description": "Custom hostname." },
+            "zone_id": { "type": "string", "required": true, "description": "Zone ID." },
+            "enabled": { "type": "bool", "optional": true, "description": "Enabled." },
+            "id": { "type": "string", "computed": true, "description": "Custom domain ID." }
+          },
+          "block_types": {}
+        },
+        "cloudflare_tunnel": {
+          "version": 1,
+          "description": "Cloudflare Tunnel.",
+          "attributes": {
+            "account_id": { "type": "string", "required": true, "description": "Account ID." },
+            "name": { "type": "string", "required": true, "description": "Tunnel name." },
+            "secret": { "type": "string", "required": true, "sensitive": true, "description": "Tunnel secret." },
+            "id": { "type": "string", "computed": true, "description": "Tunnel ID." },
+            "cname": { "type": "string", "computed": true, "description": "Tunnel CNAME target." },
+            "tunnel_token": { "type": "string", "computed": true, "sensitive": true, "description": "Tunnel token." }
+          },
+          "block_types": {}
+        },
+        "cloudflare_tunnel_config": {
+          "version": 1,
+          "description": "Cloudflare Tunnel config.",
+          "attributes": {
+            "account_id": { "type": "string", "required": true, "description": "Account ID." },
+            "tunnel_id": { "type": "string", "required": true, "description": "Tunnel ID." },
+            "id": { "type": "string", "computed": true, "description": "Config ID." }
+          },
+          "block_types": {}
+        },
+        "cloudflare_zone_settings_override": {
+          "version": 1,
+          "description": "Cloudflare zone settings override.",
+          "attributes": {
+            "zone_id": { "type": "string", "required": true, "description": "Zone ID." },
+            "id": { "type": "string", "computed": true, "description": "Settings ID." }
+          },
+          "block_types": {}
+        }
+      },
+      "data_source_schemas": {}
+    }
+  }
+}

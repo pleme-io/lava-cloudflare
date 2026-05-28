@@ -1,7 +1,7 @@
 {
-  "version": 3,
+  "version": 5,
   "workspace": {
-    "root": "/Users/drzzln/code/github/pleme-io/lava-cloudflare",
+    "root": "/Users/luis.d/code/github/pleme-io/lava-cloudflare",
     "members": [
       {
         "name": "lava-cloudflare",
@@ -50,6 +50,62 @@
     "lava-cloudflare": {
       "default_bin": null,
       "repo": "pleme-io/lava-cloudflare"
+    }
+  },
+  "target_resolves": {
+    "aarch64-apple-darwin": {
+      "crates": {
+        "lava-cloudflare-0.1.2": {
+          "dependencies": [],
+          "runtime_dependencies": [],
+          "build_dependencies": []
+        }
+      }
+    },
+    "x86_64-apple-darwin": {
+      "crates": {
+        "lava-cloudflare-0.1.2": {
+          "dependencies": [],
+          "runtime_dependencies": [],
+          "build_dependencies": []
+        }
+      }
+    },
+    "x86_64-unknown-linux-gnu": {
+      "crates": {
+        "lava-cloudflare-0.1.2": {
+          "dependencies": [],
+          "runtime_dependencies": [],
+          "build_dependencies": []
+        }
+      }
+    },
+    "x86_64-unknown-linux-musl": {
+      "crates": {
+        "lava-cloudflare-0.1.2": {
+          "dependencies": [],
+          "runtime_dependencies": [],
+          "build_dependencies": []
+        }
+      }
+    },
+    "aarch64-unknown-linux-gnu": {
+      "crates": {
+        "lava-cloudflare-0.1.2": {
+          "dependencies": [],
+          "runtime_dependencies": [],
+          "build_dependencies": []
+        }
+      }
+    },
+    "aarch64-unknown-linux-musl": {
+      "crates": {
+        "lava-cloudflare-0.1.2": {
+          "dependencies": [],
+          "runtime_dependencies": [],
+          "build_dependencies": []
+        }
+      }
     }
   }
 }
